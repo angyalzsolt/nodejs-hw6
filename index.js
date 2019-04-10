@@ -30,7 +30,7 @@ app.init = (callback)=>{
 			console.log(`Worker ${worker.process.pid} died`);
 		});
 	} else {
-		// If we're on the master thread, start the HTTP server
+		// If we're not on the master thread, start the HTTP server
 		server.init();
 		console.log(`Worker ${process.pid} started`);
 	}
